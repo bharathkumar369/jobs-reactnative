@@ -5,7 +5,7 @@ import { useRouter } from 'expo-router'
 import styles from './popularjobs.style'
 import { COLORS, SIZES } from '../../../constants';
 
-import PoplarJobCard from "../../common/cards/popular/PopularJobCard";
+import PopularJobCard from "../../common/cards/popular/PopularJobCard";
 
 import useFetch from "../../../hook/useFetch"
 
@@ -18,7 +18,13 @@ const Popularjobs = () => {
     num_pages:1
   }) 
 
-  console.log(data)
+  //console.log(data)
+
+  const [selectedJob,setSelectedJob] = useState();
+
+  const handlecardPress = (item) => {
+
+  }
 
   return (
     <View style={styles.container  }>
@@ -38,7 +44,7 @@ const Popularjobs = () => {
           <FlatList 
             data={[1,2,3,4,5,6,7,8]}
             renderItem={({item}) => (
-              <PoplarJobCard 
+              <PopularJobCard 
                 item = {item}
               />
             )}
