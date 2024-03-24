@@ -36,7 +36,7 @@ const JobSearch = () => {
             };
 
             const response = await axios.request(options);
-            setSearchResult(response.data.data);
+            setSearchResult(response.data.data); 
         } catch (error) {
             setSearchError(error);
             console.log(error);
